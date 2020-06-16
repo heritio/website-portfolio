@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(187, 158, 156);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;'
+    padding: 0px;
+}
+header{
+    margin-top: 10px;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#img-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightslategray;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 100%;
+    height: auto;
+}
+figure{
+    display: flex;
+    flex-direction: column;
+}
+figcaption{
+    align-self: center;
+    margin-top: 10px;
+}
+#bio{
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+li{
+    padding: 10px 0px 10px 0px;
+}
+.center{
+    margin-left: 15%;
+    margin-right: 5%;
+}
+.margin{
+   margin: 0px 35% 0px 35%;
+   padding-top: 20px;
+}
