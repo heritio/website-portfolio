@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>survey-form</title>
+</head>
+<body>
+    <header>
+        <h1>Survey Form</h1>
+        <p>Thank you for taking the time to improve our platform</p>
+    </header>
+    <main>
+      <form id="form">
+        <div>
+            <div class="flexi">
+               <label for="name">
+                 Name <br>
+                 <input id="name" class="more-space" type="text" placeholder="Enter your name here" required>
+               </label>
+            </div>
+            <div class="flexi">
+               <label for="email">
+                  Email <br>
+                  <input id="email" class="more-space"  type="email" placeholder="Enter your email here">
+               </label>
+            </div>
+            <div class="flexi">
+                <label for="age">
+                    Age <br>
+                    <input id="age" class="more-space"  type="number" placeholder="Age">
+                </label>
+            </div>
+            <div class="flexi">
+               <label for="role">
+                Which option best describes your current role?<br>
+                   <select name="role" id="role" class="more-space">
+                      <option value="Select current role"  selected disabled>Select current role</option>
+                      <option value="Student">Student</option>
+                      <option value="Full time Jobb">Full time jobb</option>
+                      <option value="Full time learner">Full time learner</option>
+                      <option value="prefer not to say">prefer not to say</option>
+                      <option value="Other">Other</option>
+                   </select>
+               </label>
+            </div>
+
+        </div>
+ 
+        <div style="display: flex; flex-direction: column; align-items: flex-start;" >
+            <p>Would you recomend us to a friend</p>
+            <div class="flex">
+            <label for="definitely">
+              <input class="pad" id="definitely" type="radio" value="definitely" name="recomendation" checked>Definitely
+            </label> 
+            <label for="maybe">
+                <input class="pad" id="maybe" type="radio" value="maybe" name="recomendation" checked>Maybe
+              </label> 
+            <label for="not sure">
+                <input class="pad" id="not sure" type="radio" value="not sure" name="recomendation" checked>Not sure
+              </label>  
+            </div> 
+        </div>
+        
+        <div>
+           <label for="feature">
+           What is your favorite feature that we provide? <br>
+           <select name="feature" id="feature" class="more-space" >
+               <option value="Select an option" disabled selected>Select an option</option>
+               <option value="Challenges">Challenges</option>
+               <option value="Projects">Projects</option>
+               <option value="Community">Community</option>
+               <option value="Open Source">Open Source</option>
+           </select>
+           </label>
+        </div>
+
+        <div class="flex">
+            <p>What would you like to see improved? <sup>(Check all that apply)</sup></p>
+            <label for="front">
+              <input id="front" type="checkbox" value="front-end projects" name="improve">Front-end projects
+            </label>
+            <label for="back">
+                <input id="back" type="checkbox" value="back-end projects" name="improve">Back-end projects
+              </label>
+              <label for="Data">
+                <input id="Data" type="checkbox" value="Data visualization" name="improve">Data Visualization
+              </label>
+              <label for="challenges">
+                <input id="challenges" type="checkbox" value="Challenges" name="improve">Challenges
+              </label>
+        </div>
+
+        <div>
+            <div>
+               <label for="comments">
+                   Any comments or suggestions?<br>
+                   <input type="text" placeholder="Enter your comment here" class="more-space">
+               </label>
+            </div>
+        </div>
+        <input id="button" type="submit" value="Submit" style="padding:10px;" >
+      </form>
+    </main>
+</body>
+</html>
