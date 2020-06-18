@@ -4,48 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Elon Musk Tribut</title>
+    <title>Product landing page</title>
 </head>
 <body>
-    <header>
-        <h1>
-            Elon Musk
-        </h1>
-        <p>
-            The New Age Innovator
-        </p>
-    </header>
-    <main>
-    <div id="img-div">
-       <figure>
-           <img src="cybertruck musk.jpg">
-           <figcaption>
-             Elon Musk presenting the Cybertruck
-           </figcaption>
-       </figure>
+    <div id="header">
+             <div id="logo">
+                   <img src="logo.png" alt="Company logo">
+             </div>
+             <nav id="navigation">
+                 <ul>
+                     <li>
+                      <a href="#sec-1">Features</a>
+                     </li>
+                     <li>
+                        <a href="#video">How it works</a>
+                     </li>
+                     <li>
+                        <a href="#pricing">pricing</a>
+                     </li>
+                 </ul>
+             </nav>
     </div>
-    <div id="bio">
-     <h2 class="margin">A Bio Of Elon Musk</h2>
-     <ul>
-         <li>Elon Musk  is an engineer, industrial designer, technology entrepreneur and philanthropist</li>
-         <li>He is a citizen of South Africa, Canada, and the United States</li>
-         <li>He is the founder, CEO and chief engineer/designer of SpaceX, early investor,
-              CEO and product architect of Tesla, Inc. Founder of The Boring Company,
-              co-founder of Neuralink; and co-founder and initial co-chairman of OpenAI.</li>
-         <li>He was elected a Fellow of the Royal Society (FRS) in 2018. In December 2016, 
-             he was ranked 21st on the Forbes list of The World's Most Powerful People, 
-             and was ranked joint-first on the Forbes list of the Most Innovative Leaders of 2019</li>
-         <li>A self-made billionaire, as of June 2020 his net worth was estimated at $38.8 billion
-              and he is listed by Forbes as the 31st-richest person in the world.
-              He is the longest tenured CEO of any automotive manufacturer globally.</li>
-     </ul>
-     <p><em>When something is important enough, you do it even if the odds are not in your favor.</em></p>
-     <p>-Elon Musk</p>
+    <div class="center">
+        <div class="flex-colum">
+               <h1>Quality service with the costumer at heart</h1>
+               <form class="flex-colum">
+               <input id="input" type="email" placeholder="Enter your Email here">
+               <input id="submit" type="submit" value="Get Started">
+               </form>
+        </div>
+        <div id="sec-1" class="flex-colum">
+           
+            <div class="flex-row">
+                        <div class="flex-basis1">
+                        <img src="car.png" alt="symbol for delivery" class="size">
+                        </div>
+                        <div class="flex-basis2">
+                         <h2>Fast shipping</h2>
+                         <p class="sizeforp">We make sure you recieve your materials as soon as we have finished preparing them.
+                              We also provide free returns if you are not satisfied.</p>
+                        </div>
+                </div>
+                <div class="flex-row">
+                        <div class="flex-basis1">
+                         <img src="quality.png" alt="icon for quality" class="size">
+                        </div>
+                        <div class="flex-basis2">
+                          <h2>Quality assurance</h2>
+                          <p class="sizeforp">For every purchase you make,
+                            we will ensure there are no damages or faults and we will check and test the materials before shipping.</p>
+                        </div>
+                </div>
+                
+        </div>
+        <div id="video">
+            <iframe width="420" height="315"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </div>
+        <div id="pricing">
+            <div class="box">
+                <div class="back-ground"><h3>High Valve</h3></div>
+                <div class="centered">
+                    <h2>$900</h2>
+                    <p>Lorem ipsum.
+                        Lorem ipsum.
+                        Lorem ipsum dolor.
+                        Lorem ipsum.
+                    </p>
+                    <input class="select" type="submit" value="Select">
+                </div>
+            </div>
+            <div class="box">
+                <div class="back-ground"><h3>Medium Valve</h3></div>
+                <div class="centered">
+                    <h2>$600</h2>
+                    <p>Lorem ipsum.
+                        Lorem ipsum.
+                        Lorem ipsum dolor.
+                        Lorem ipsum.
+                    </p>
+                    <input class="select" type="submit" value="Select">
+                </div>
+            </div>
+            <div class="box">
+                <div class="back-ground"><h3>Low Valve</h3></div>
+                <div class="centered">
+                    <h2>$300</h2>
+                    <p>Lorem ipsum.
+                        Lorem ipsum.
+                        Lorem ipsum dolor.
+                        Lorem ipsum.
+                    </p>
+                    <input class="select" type="submit" value="Select">
+                </div>
+            </div>
+        </div>
     </div>
-    </main>
-    <footer >
-      <h2 class="center">If you have time, you should read more about this incredible human being on his 
-          <a href="https://en.wikipedia.org/wiki/Elon_Musk">Wikipedia entry</a>.</h2>
+    <footer>
+       <div class="flex-row">
+           <p class="marg"><a href="#header">privacy</a></p>
+           <p class="marg"><a href="#header">terms</a></p>
+           <p class="marg"><a href="#header">contact</a></p>
+       </div>
+       <div>
+        <p class="marg">Copyright, 2020 Heritier.Z.A</p>
+       </div>
     </footer>
 </body>
 </html>
