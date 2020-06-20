@@ -1,3 +1,4 @@
+
 const form = document.getElementById("form");
 const userName = document.getElementById("username");
 const email = document.getElementById("email");
@@ -17,7 +18,10 @@ function showSucces(input) {
   formControl.className = "form-control success";
 }
 //Emailvalidator with regex
-
+function isEmailValid(email) {
+  const reg = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+  return reg.test(email);
+}
 //if statements
 
 form.addEventListener("submit", function (e) {
@@ -31,6 +35,8 @@ form.addEventListener("submit", function (e) {
 
   if (email.value === "") {
     showError(email, "Email is required");
+  } else if (!isEmailValid(email.value)) {
+    showError(email, "Email is not valid");
   } else {
     showSucces(email);
   }
