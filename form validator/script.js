@@ -19,9 +19,13 @@ function showSucces(input) {
 }
 
 //Emailvalidator with regex
-function isEmailValid(email) {
+function checkEmail(input) {
   const reg = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-  return reg.test(email);
+  if (reg.test(input.value.trim())) {
+    showSucces(input);
+  } else {
+    showError(input, "Email is not valid");
+  }
 }
 
 //checkrequiredfields function
