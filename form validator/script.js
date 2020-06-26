@@ -34,6 +34,23 @@ function checkRequired(inputArr) {
     }
   });
 }
+//  Check input length
+function checkLength(input, min, max) {
+  if (input.value.length < min) {
+    showError(
+      input,
+      `${getFieldName(input)} must be atleast ${min} characters`
+    );
+  } else if (input.value.length > max) {
+    showError(
+      input,
+      `${getFieldName(input)} must be less than ${max} characters`
+    );
+  }else{
+    showSucces(input);
+  }
+}
+
 //getFieldname function
 function getFieldName(input) {
   return input.id.charAt(0).toUpperCase() + input.id.slice(1);
