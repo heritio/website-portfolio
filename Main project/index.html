@@ -12,13 +12,11 @@
       <div class="settings">
         <div class="from">
           <label for="from">from</label>
-          <input type="text" id="from" />
-          <small>error message</small>
+          <input type="text" id="from" placeholder="Type adress" />
         </div>
         <div class="to">
           <label for="to">to</label>
-          <input type="text" id="to" />
-          <small>error message</small>
+          <input type="text" id="to" placeholder="Type adress" />
         </div>
         <div class="time">
           <div class="date">
@@ -31,9 +29,10 @@
           </div>
         </div>
         <div class="luggage">
-          <label for="luggage">Item Volume</label>
+          <label for="luggage">Item weight in Volume</label>
           <input type="number" name="Item Volume" id="luggage" />
         </div>
+        <button id="get">Beregn</button>
       </div>
       <div class="map-price">
         <div class="result">
@@ -46,25 +45,66 @@
       </div>
     </div>
     <script>
+      var searchInput1 = "from";
+      var searchInput2 = "to";
       //calling the map for google maps api
       function initMap() {
+        /*
+              var directionsService = new google.maps.DirectionsService();
+              var directionsDisplay = new google.maps.DirectionsRenderer();
+              */
         var map = new google.maps.Map(document.getElementById("map"), {
           zoom: 12,
           center: { lat: 59.911491, lng: 10.757933 },
+          // disable the default User Interface
+          disableDefaultUI: true,
+          // add back fullscreen, streetview, zoom
+          zoomControl: true,
+          streetViewControl: true,
+          fullscreenControl: true,
         });
+        //Add autocomplete to search inputs
+        var defaultBounds = new google.maps.LatLngBounds(
+          new google.maps.LatLng(59.911491, 10.757933),
+          new google.maps.LatLng(59.93552, 10.76715)
+        );
+        var options = {
+          bounds: defaultBounds,
+        };
 
-        //add marker
-        var marker = new google.maps.Marker({
-          position: { lat: 59.911491, lng: 10.757933 },
-          map: map,
-          icon:
-        });
+        //get the HTML input elemnt for the autocomplete search box.
+        var input = document.getElementById(searchInput1);
+
+        //Create the autocomplete object.
+        var autocomplete = new google.maps.places.Autocomplete(input, options);
+
+        /*
+              //add marker
+              var marker = new google.maps.Marker({
+                position: { lat: 59.911491, lng: 10.757933 },
+                map: map,
+              });
+
+              var destination = document.getElementById("to");
+              directionsDisplay.setMap(map);
+              */
+
+        addMarker({ lat: 59.911491, lng: 10.757933 });
+        addMarker({ lat: 59.93552, lng: 10.76715 });
+
+        //Add marker function
+        function addMarker(coords) {
+          var marker = new google.maps.Marker({
+            position: coords,
+            map: map,
+          });
+        }
       }
     </script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDx0UwLF3MUemNrM7eL9MztXpVgXktSJOw&callback=initMap&libraries=&v=weekly"
       defer
     ></script>
-    <script src="/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDx0UwLF3MUemNrM7eL9MztXpVgXktSJOw&libraries=places"></script>
   </body>
 </html>
