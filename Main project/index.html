@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Logistics kalkulator</title>
+  </head>
+  <body>
+    <header class="header"><h1>Logistics kalkulator</h1></header>
+    <div class="container">
+      <div class="settings">
+        <div class="from">
+          <label for="from">from</label>
+          <input type="text" id="from" />
+          <small>error message</small>
+        </div>
+        <div class="to">
+          <label for="to">to</label>
+          <input type="text" id="to" />
+          <small>error message</small>
+        </div>
+        <div class="time">
+          <div class="date">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" />
+          </div>
+          <div class="clock">
+            <label for="clock">Clock</label>
+            <input type="time" name="clock" id="clock" />
+          </div>
+        </div>
+        <div class="luggage">
+          <label for="luggage">Item Volume</label>
+          <input type="number" name="Item Volume" id="luggage" />
+        </div>
+      </div>
+      <div class="map-price">
+        <div class="result">
+          <h2 class="result-text">
+            The price of this service based on the time used, length of the road
+            and weight of items in volume is <span>0</span> kr
+          </h2>
+        </div>
+        <div class="map" id="map"></div>
+      </div>
+    </div>
+    <script>
+      //calling the map for google maps api
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: { lat: 59.911491, lng: 10.757933 },
+        });
+
+        //add marker
+        var marker = new google.maps.Marker({
+          position: { lat: 59.911491, lng: 10.757933 },
+          map: map,
+          icon:
+        });
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDx0UwLF3MUemNrM7eL9MztXpVgXktSJOw&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
