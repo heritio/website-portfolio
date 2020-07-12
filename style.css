@@ -1,121 +1,107 @@
-
-body{
-    background-color: rgb(157, 236, 228);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: medium;
-    top: 30px;
-    margin-left: 20%;
-    margin-right: 20%;
+body,
+html {
+  margin: 0;
+  height: 100%;
+  line-height: 1.8em;
 }
 
-ul{
-    list-style: none;
-    display: flex;
+.navbar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  margin-bottom: 0;
+  background: #fff;
+  padding: 15px 0;
+  background: transparent;
+  width: 100%;
 }
-a{
-    text-decoration: none;
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-li{
-    margin-top: 70px;
-    padding-left: 20px;
-    padding-right: 20px;
-    align-self: flex-end;
+li {
+  list-style: none;
+  margin-right: 5px;
+  font-size: 25px;
+  font-weight: 900;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  color: white;
+  border-radius: 2px;
+  transition: 0.5s;
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
 }
-#header{
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    background-color: white;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    align-content: center;
-    height: 150px;
-    margin-top: -50px;
+li:hover {
+  font-size: 40px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  font-weight: bolder;
 }
-nav{
-    padding-right: 250px;
+.img1 {
+  background-attachment: fixed;
+  background-image: url(https://lh3.googleusercontent.com/eF0xNkYkdbxX9r6DLARslyl_8Fg0kPnof0jvyJelje6C-5cESsAeJthFBOF4ILgr1WCyR2JBXQgogsyvd2baE3bqu0H3qTcRG7G2h0Oc-Hd5aJ9ThLM8lFVe-z6sYp_EAT5hQ0ipCoEW4YiIHlyO-zUriNKLKi7rQXLZ8KEi2N67KJCupSgTAUIzrzsC3Ra0zjPgJhozQB5e7ofVkEhRRXj6NXR4fUyhb3FSHqaer6kIQTrvgLqxnAoBRzUUY3SnGj7czrVgHGbuDvVHYbh1d5wJvnFRZvRj0G9VqWFVHGrQOUxVqHkFm77cTZyT1czGphS57UXVWIVB7Y5dNNFEQADOnbgK7vZ7kUk7GjvHrciDN8NcsD2ZfoeQKFcbt1ZWSAyCwF-ya-kY9XCR1cRe4bL1vDjYjemIUfQyxo9gbH_VqIhfC4ZqkbL16nEt3TzvooKKlPtjLX53Bq3I-wbLFHB5D_SAdvr8rzIHMt9FfeTBz-NmQsZfxDRqqvx5ifTH0n9s_KWj7fMgMTaF-NjChlR-Evm7XOhe-geLfoR8FDa44z3onh-FNliMLYRAv9o4MWm7R4L93gUKzAopUhFPj7GGhcc0LGYLxjbJU1ymnUXzceWffdGj6BwReKWGH8dQzY118ZOMDQ2P-AiYzVweP4um0XLg2tJgOp2KC4h0Zp3whj2ZKu7rOAZ6tFs=w653-h789-no?authuser=0);
+  min-height: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#logo{
-    margin-left: 50px;
+.intro-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.center{
-    margin-top: 120px;
-    
+.stilish {
+  text-align: center;
+  margin-top: 300px;
+  background-color: rgb(53, 50, 50);
+  font-size: 50px;
+  border-radius: 3px;
+  border: 50px solid black;
+  color: white;
 }
-.flex-colum{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.img2 {
+  min-height: 500px;
+  background-image: url(https://lh3.googleusercontent.com/aFoJ4isN2wLQKlhv6RLaeetlboUIvRV8oK4X3fVmOfA00YGr8Wci1tYTuqWaUFJLEscAQeF9HK1iZuX00MCXqbqwWbDqYU-3sNs2Is9LzjvZGABPJB0jdKQVW3yjsiyorxu9NjYdbNTz454R3WDfRySm0rJmavR9R8IR8gJ9X-L5f60qAzBhKae2mfHhwpVPjjC4DKR0o2LhvavUOEmt2NLZkiaqJjyH6mA4SmnQQWCP65LGAQ_eBzo7q2xQ2EaCYthmoN0AevNiqhFhG-RC1drdFVcoiNk3rQ_5nluJxCL_T1OhcuedBizIVSFFNHB9E98-zZgQkmnrxhWTyAMo8aLeV-d7xjpDyAuS_5iM4ox3Ed1AwMYsWZF61AQec7SBceZmqGd_C0dh0PDqGa6mCeQZJrLPh-kWfj0oS4X1V-5zDUnQ33_Q2dDogryRNRU0DhCvrXH_ZgBTNyf0gGvBX26Okkm1e05AIUyfXLxP8uxXNqufN--ZO8CMIdyKFkF75ugU0X7sv3hMvUplXdU_UbPJOBWa-MSzNFqV8CoaoqOtrT0r2RWB9LgP0wSfNx49GyXWXqjqvnuYK5K3vQx92oIjZ8L2Yfh8PRdxuuh5vUCxX7pnX0VMyWovUIOI-oixcY_pCf4K4RRA4otD889UP7fMSpTCnYzt1Qs1aMbZKbFm6fxe0fu9psqC3gE=w632-h789-no?authuser=0);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.flex-row{
-    display: flex;
-    margin-top: 50px;
+.img3 {
+  min-height: 500px;
+  background-image: url(https://lh3.googleusercontent.com/UxYZfE9lNx3ZUCD69khQoc0J8s1C1uM2w8ZLoW9HAJmLFL_jXQu3Zq8l2FZPJvy01c_qQpB_jxagJ2UeD7YF60DisjawnoPVsOmacXGnAZm8xMXloh6MqCnkBuUJeKNo5mY3RtCuyqGx4u9upSSdoqlHGepawhX2BmvrHwVDSEG1LeHxphDkaHcy2NlZL9l95m0n2n1A4RP4NhsDnSV0I5iOT19ExnmtMHKdfsE_cLAAz3vPbXXHR1oQe6X6o2CwBgTrDZMOvyCQWrpW-j_OM_DHrVVaEKXr8bG9FtdkJgo2gI0ENRuhGaLgsPx5ASh2FRmu8XXhD0Keyjxwp2zHRkztuJmXRjECn2lr0I5hzHaXYaao_WHEKgJNmMgF8izki1ugmh-shep5B3DXJR_9BdPzg96S8rnqsdjP7-Q-G5PRxOrvBV1T80wkypfp_KFZpPHue4A66tnSczCuRhabgLtWV3PDjy6td-Zi0hjv0VZzcgqeHsgYWJSYITlMHTeUqvjSEPjQtlYhaNUpfcwEyRTvtjkZX6nKPPxO44XJslOpPO53ECeLmgLBKUdq_ES4kjJuEbJt7kjnaBWBbSjEgM7WKfFKjCm6iSmY9keh9F7iQK9w8IdROUgozzvFX9-gIYEOvXN099pGGVKZh9yWvuUtyqzW8OF8PLUOD65aArmsjQQrRzK6jnjaiDw=w1184-h789-no?authuser=0);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#video{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+.sec-2 {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-
-.size{
-    width: 30%;
-    height: auto;
-    padding-right: 20px;
-    align-self: flex-start;
-    justify-self: flex-start;
+#footer {
+  background-color: darkslategray;
+  min-height: 100px;
 }
-#pricing{
-    display: flex;
-    justify-content: center;
+.sec-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.box{
-   border-width: 1px;
-   border-style: solid;    
-   margin: 50px 5px 10px 5px;
-   border-radius: 2px;
-   display: flex;
-   flex-direction: column;
-   align-content: center;
-   height: 300px;
-}
-.back-ground{
-    background-color: royalblue;
-    display: flex;
-    justify-content: center;
-}
-
-.centered{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.sizeforp {
-    width: 80%;
-}
-#input{
-    padding: 5px 50px 5px 50px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-#submit{
-    padding: 5px 40px 5px 40px;
-    font-weight: 900;
-    background-color: lightgoldenrodyellow;
-}
-
-.select{
-    padding: 5px 40px 5px 40px;
-    font-weight: 900;
-    background-color: lightgoldenrodyellow;
-    border-radius: 3px;
-}
-.marg{
-    margin-right: 20px;
-    margin-left: 100px;
-}
-footer{
-    background-color: lightseagreen;
+.stylishbanner {
+  background-color: dimgray;
+  color: white;
+  width: 30%;
+  padding: 20px;
+  border-radius: 5px;
 }
